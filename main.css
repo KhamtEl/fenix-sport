@@ -1,0 +1,69 @@
+body {
+    background-image: url(img/bg.png);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.underlined {
+    padding-bottom: 2px;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    -webkit-border-image:
+        -webkit-linear-gradient(left, #d69238, red) 100% 1;
+    -o-border-image:
+        -o-linear-gradient(left, #d69238, red) 100% 1;
+    -moz-border-image:
+        -moz-linear-gradient(left, #d69238, red) 100% 1;
+}
+
+.container {
+    width: 1100px;
+}
+
+
+header {
+    background-color: rgba(0,0,0,0) !important;
+    border: none;
+    height: 35vh;
+}
+
+header > div {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+ul.menu  {
+    list-style: none;
+    font-weight: bolder;
+    margin-left: 15px;
+}
+
+ul.menu li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+ul.menu li i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+section {
+    height: 58vh;
+}
+
+footer {
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    -webkit-border-image:
+        -webkit-linear-gradient(left, #d69238, red) 100% 1;
+    -o-border-image:
+        -o-linear-gradient(left, #d69238, red) 100% 1;
+    -moz-border-image:
+        -moz-linear-gradient(left, #d69238, red) 100% 1;
+    padding: 5px;
+}
+
