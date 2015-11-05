@@ -29,7 +29,7 @@ body {
 header {
     background-color: rgba(0,0,0,0) !important;
     border: none;
-    height: 35vh;
+    height: 150vh;
 }
 
 header > div {
