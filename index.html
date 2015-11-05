@@ -30,18 +30,18 @@
                 </ul>
             </div>
             <div class="content">
-                <div class="half-width">
+                <div>
                     <form action="/" method="post">
                         <h2>пришло время стать легендой</h2>
                         <p>до конца октября вы можете преобрести целый год занятий
                             с тренером со скидкой 60%</p>
                         <div class="half-width">
                             <label>Имя</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" required placeholder="Введите имя">
                         </div>
                         <div class="half-width">
                             <label>телефон</label>
-                            <input type="tel"name="tel"required placeholder="+7__ __ __ __">
+                            <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
                         </div>
                         <input type="submit" value="ЗАПИСАТЬСЯ">
                     </form>
@@ -52,13 +52,32 @@
                         <p>Наш клуб разделен на 4 спортивных зоны: кроссфит,свободные веса, тяжелая атлетика и кинезитерапия.Все занятия проходят под руководством тренера.</p>
                     </div>
                 </div>
-                <div class="half-width">
-                    socials
+                <div>
+                    <div class="socials">
+                        МЫ В СОЦ.СЕТЯХ:
+                        <a href="#"><i class="fa fa-vk"></i></a>
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer text-center">
                 &copy; 2015 ООО "ФЕНИКС-СПОРТ". ЦЕНТР ФУНКЦИОНАЛЬНОЙ ПОДГОТОВКИ. All rights reserved
             </div>
+            <script>
+                /* event listener */
+                var prefix = '+7 ';
+                document.getElementsByName("phone")[0].addEventListener('input', function () {
+                    this.value = this.value.replace(prefix, '');
+                    var pattern = '(123) 456-78-90', arr = this.value.match(/\d/g), i = 0;
+                    if (arr === null) return;
+                    this.value = prefix + pattern.replace(/\d/g, function ( a, b ) {
+                        if (arr.length) i = b + 1;
+                        return arr.shift();
+                    }).substring(0, i);
+                });
+            </script>
         </div>
     </body>
 </html>

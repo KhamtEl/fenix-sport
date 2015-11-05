@@ -10,6 +10,10 @@ body {
     color: white;
 }
 
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 .underlined {
     padding-bottom: 2px;
     border-width: 0 0 2px 0;
@@ -62,12 +66,38 @@ ul.menu li i {
     font-size: 20px;
 }
 
-form, .info  {
+form, .info, .socials {
     margin: 20px 0 0 0;
-    padding: 30px;
-    width: 404px;
     background:rgba(0,0,0,0.3);
     color:#fff;
+}
+
+form, .info {
+    width: 404px;
+    padding: 30px;
+}
+
+.socials {
+    position: absolute;
+    width: 80%;
+    font-size: large;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
+}
+
+.socials i {
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 30px;
+    margin: 0 5px;
+    display: inline;
 }
 
 h2, h3 {
@@ -89,11 +119,24 @@ label {
     display: inline-block;
     margin-right: -4px;
     width: 50%;
+    position: relative;
+    height: auto;
+}
+
+.content {
+    display: table;
+    width: 100%;
+}
+
+.content > div {
+    display: table-cell;
+    position: relative;
+    width: 50%;
 }
 
 .half-width input{
     background:transparent;
-    border: 2px solid #fff;
+    border: 2px solid rgb(232, 89, 36);
     border-radius: 5px;
     color:#fff;
     padding: 5px 10px;
@@ -111,6 +154,7 @@ label {
 
 form {
     text-transform: uppercase;
+    outline: none;
 }
 
 input[type="submit"] {
@@ -122,6 +166,7 @@ input[type="submit"] {
     border-radius: 5px;
     background-image: linear-gradient(to bottom,#E58228, #EC3221);
     color: #fff;
+    cursor: pointer;
 }
 
 .footer {
